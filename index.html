@@ -42,10 +42,26 @@
         }
 
         .container img:hover{
-            transform: scale(1.2); 
+           /* transform: scale(1.2); */
         }
 
+.container::before {
+  content: ""; /* Create a pseudo-element to hold the background image */
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Align to the top of the container */
+  left: 0; /* Align to the left of the container */
+  width: 200%; /* Set width to 200% to cover the entire container */
+  height: 100%; /* Set height to 100% to cover the entire container */
+  background-image: url('path/to/your-image.jpg'); /* Set the image as the background */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: left center; /* Align the left side of the image with the container's left side */
+  transform-origin: left center; /* Set the transformation origin to the left center */
+  transition: transform 0.3s ease; /* Add a smooth transition effect for transform */
+}
 
+.container:hover::before {
+  transform: scaleX(1.33); /* Zoom in the right side of the image by one-third when hovering */
+}
         .left-link,
         .right-link {
             position: fixed;
