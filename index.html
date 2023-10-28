@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Vertical Image Layout</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            display: grid;
+            margin-top: -215px;
+            gap: 20px;
+            max-height: 400px;
+            /* Limit the height of the container if needed */
+        }
+
+        .container img {
+            width: 90vw;
+            height: auto;
+        }
+
+        .left-link,
+        .right-link {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 5px 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .left-link {
+            left: 10px;
+        }
+
+        .right-link {
+            right: 10px;
+        }
+
+        .left-link a,
+        .right-link a {
+            background-color: #800000;
+            display: block;
+            margin-bottom: 70px;
+            color: #fff;
+            text-decoration: none;
+            padding: 7px;
+            text-align: center;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-link">
+        <a href="#january">January</a>
+        <a href="#february">February</a>
+        <a href="#march">March</a>
+        <a href="#april">April</a>
+        <a href="#may">May</a>
+        <a href="#june">June</a>
+    </div>
+    <div class="container">
+        <img id="january" src="images/1.jpg" alt="January">
+        <img id="february" src="images/2.jpg" alt="February">
+        <img id="march" src="images/3.jpg" alt="March">
+        <img id="april" src="images/4.jpg" alt="April">
+        <img id="may" src="images/5.jpg" alt="May">
+        <img id="june" src="images/6.jpg" alt="June">
+        <img id="july" src="images/7.jpg" alt="July">
+        <img id="august" src="images/8.jpg" alt="August">
+        <img id="september" src="images/9.jpg" alt="September">
+        <img id="october" src="images/10.jpg" alt="October">
+        <img id="november" src="images/11.jpg" alt="November">
+        <img id="december" src="images/12.jpg" alt="December">
+    </div>
+    <div class="right-link">
+        <a href="#july">July</a>
+        <a href="#august">August</a>
+        <a href="#september">September</a>
+        <a href="#october">October</a>
+        <a href="#november">November</a>
+        <a href="#december">December</a>
+    </div>
+</body>
+
+</html>
