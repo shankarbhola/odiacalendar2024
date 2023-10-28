@@ -32,12 +32,19 @@
             gap: 20px;
             max-height: 400px;
             /* Limit the height of the container if needed */
+            
         }
 
         .container img {
             width: 90vw;
             height: auto;
+            transition: transform 0.3s ease;
         }
+
+        .container img:hover{
+            transform: scale(1.2); 
+        }
+
 
         .left-link,
         .right-link {
