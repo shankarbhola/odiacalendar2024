@@ -45,7 +45,7 @@
            /* transform: scale(1.2); */
         }
 
-.container::before {
+.container img::before {
   content: ""; /* Create a pseudo-element to hold the background image */
   position: absolute; /* Set position to absolute */
   top: 0; /* Align to the top of the container */
@@ -59,7 +59,7 @@
   transition: transform 0.3s ease; /* Add a smooth transition effect for transform */
 }
 
-.container:hover::before {
+.container img:hover::before {
   transform: scaleX(1.33); /* Zoom in the right side of the image by one-third when hovering */
 }
         .left-link,
